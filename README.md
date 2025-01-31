@@ -14,4 +14,4 @@ Clone the repository and install dependencies:
 ```bash
 git clone https://github.com/yourusername/bspline-lattice-deformation.git
 cd lattice-deformation
-pip install -r requirements.txt
+pip install numpy torch open3d pytorch3d

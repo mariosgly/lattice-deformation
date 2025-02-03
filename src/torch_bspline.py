@@ -1,5 +1,4 @@
 import torch
-import pytorch3d.transforms
 
 def bspline_weights_torch(t: torch.Tensor) -> torch.Tensor:
     """

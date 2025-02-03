@@ -2,13 +2,16 @@ import argparse
 import numpy as np
 import open3d as o3d
 import json
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from src.numpy_bspline import bspline_2x2x2_deform_fast
 
 
 def main(json_path, mesh_path, output_path):
     # (1) Read the JSON
     with open(json_path, 'r') as f:
-        lattice_deformations = json.load(f)['0'][0]['lattice_deformations']
+        lattice_deformations = json.load(f)['lattice_deformations']
 
     # (2) Read a mesh
     mesh = o3d.io.read_triangle_mesh(mesh_path)
@@ -58,8 +61,8 @@ def main(json_path, mesh_path, output_path):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="B-spline 2x2x2 deformation script")
     parser.add_argument("--json", required=True, help="Path to lattice deformation JSON file")
-    parser.add_argument("--mesh", required=True, help="Path to input mesh PLY file")
-    parser.add_argument("--output", required=True, help="Path to save deformed mesh PLY file")
+    parser.add_argument("--mesh", required=True, help="Path to input mesh file")
+    parser.add_argument("--output", required=True, help="Path to save deformed mesh file")
     
     args = parser.parse_args()
     

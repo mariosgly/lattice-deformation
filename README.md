@@ -29,11 +29,11 @@ Lattice deformation is a technique used in Blender to manipulate the shape of an
 4. **Deform the Object**: Move the lattice control points to observe the deformation of the object.
 5. **Apply the Modifier** (Optional): If you want to make the deformation permanent, apply the lattice modifier.
 
-**Blender Deformation:**
-![Blender Deformation](examples/blender_before_deform.jpg)
-
-**Code-based Deformation:**
-![Code Deformation](examples/blender_after_deform.jpg)
+**Blender Lattice Box Around Object & Deformation:**
+<p align="center">
+    <img src="examples/blender_before_deform.jpg" width="45%" />
+    <img src="examples/blender_after_deform.jpg" width="45%" />
+</p>
 
 ### **Reproducing the Blender Deformation with the Python Script**
 You can achieve the same lattice deformation effect as in Blender by running the following Python script:
